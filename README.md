@@ -48,6 +48,9 @@ The result is as follows.
 but `${env.MAVEN_PROXY_PORT_INT}` is not replaced with `18080`.
 
 ## Usage
+Copy the Maven archive zip file to `maven` directory and execute as follows.
+(Change MAVEN_VERSION to your maven version)
 ```bash
-$ docker run -v ~/.m2/repository:/root/.m2/repository $(docker build -q .)
+$ docker run -v ~/.m2/repository:/root/.m2/repository -e MAVEN_VERSION=3.5.4-SNAPSHOT $(docker build -q .)
 ```
+

@@ -188,3 +188,4 @@ $RECYCLE.BIN/
 *.~vsd*
 
 maven/*
+!maven/.gitkeep
