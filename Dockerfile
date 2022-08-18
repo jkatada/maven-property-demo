@@ -1,4 +1,4 @@
-From openjdk:8u162-jdk
+From openjdk:11-jdk
 
 USER root
 WORKDIR /root
