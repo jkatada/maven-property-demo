@@ -1,4 +1,4 @@
-From maven:3.5.3-jdk-8
+From maven:3.8.6-jdk-11
 
 USER root
 WORKDIR /root
