@@ -6,6 +6,11 @@ of settings.xml.
 ## Overview
 This demo works as follows.
 
+### 0. Execute maven-help-plugin to download required plugins without proxy.
+```
+mvn help:effective-settings -X
+```
+
 ### 1. Export two environment variables
 ```bash
 export MAVEN_PROXY_HOST_STRING=proxy.foo.com
@@ -28,7 +33,7 @@ These variables are used in settings.xml for proxy settings.
 ### 2. Execute maven-help-plugin to show effective settings.xml.
 
 ```bash
-mvn help:effective-settings -X
+mvn -s /root/settings.xml help:effective-settings -X
 ```
 
 The result is as follows.
