@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <servers>
+    <server>
+      <id>myserver</id>
+      <username>${someUser}</username>
+    </server>
+  </servers>
+
+  <profiles>
+    <profile>
+      <id>p1</id>
+      <activation>
+        <property>
+          <name>someUser</name>
+          <value>me</value>
+        </property>
+      </activation>
+
+      <properties>
+        <someUser>otherGuy</someUser>
+      </properties>
+    </profile>
+  </profiles>
+
+</settings>
+

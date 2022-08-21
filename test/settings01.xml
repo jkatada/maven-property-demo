@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <!--  <localRepository>${env.MAVEN_STRING1}</localRepository> -->
+
+  <interactiveMode>${env.MAVEN_BOOLEAN}</interactiveMode>
+
+      <!-- <offline>${env.MAVEN_BOOLEAN}</offline> -->
+
+<!--   <pluginGroups> -->
+<!--     <pluginGroup>${env.MAVEN_STRING1}</pluginGroup> -->
+<!--     <pluginGroup>${env.MAVEN_STRING2}</pluginGroup> -->
+<!--   </pluginGroups> -->
+
+  <servers>
+    <server>
+      <id>${env.MAVEN_STRING1}</id>
+      <username>${env.MAVEN_STRING1}</username>
+      <password>${env.MAVEN_STRING1}</password>
+      <privateKey>${env.MAVEN_STRING1}</privateKey>
+      <passphrase>${env.MAVEN_STRING1}</passphrase>
+      <filePermissions>${env.MAVEN_STRING1}</filePermissions>
+      <directoryPermissions>${env.MAVEN_STRING1}</directoryPermissions>
+      <configuration>
+        <wagonProvider>${env.MAVEN_STRING1}</wagonProvider>
+        <httpConfiguration>
+          <all>
+            <readTimeout>${env.MAVEN_INT}</readTimeout>
+          </all>
+        </httpConfiguration>
+      </configuration>
+    </server>
+  </servers>
+
+  <mirrors>
+    <mirror>
+      <id>${env.MAVEN_STRING1}</id>
+      <name>${env.MAVEN_STRING1}</name>
+      <url>${env.MAVEN_STRING1}</url>
+      <mirrorOf>${env.MAVEN_STRING1}</mirrorOf>
+    </mirror>
+  </mirrors>
+
+  <proxies>
+    <proxy>
+      <id>${env.MAVEN_STRING1}</id>
+      <active>${env.MAVEN_BOOLEAN}</active>
+      <protocol>${env.MAVEN_STRING1}</protocol>
+      <host>${env.MAVEN_STRING1}</host>
+      <port>${env.MAVEN_INT}</port>
+      <username>${env.MAVEN_STRING1}</username>
+      <password>${env.MAVEN_STRING1}</password>
+      <nonProxyHosts>${env.MAVEN_STRING1}</nonProxyHosts>
+    </proxy>
+    <proxy>
+      <id>${env.MAVEN_STRING2}</id>
+      <active>false</active>
+      <protocol>${env.MAVEN_STRING2}</protocol>
+      <host>${env.MAVEN_STRING2}</host>
+      <port>${env.MAVEN_INT}</port>
+      <username>${env.MAVEN_STRING2}</username>
+      <password>${env.MAVEN_STRING2}</password>
+      <nonProxyHosts>${env.MAVEN_STRING2}</nonProxyHosts>
+    </proxy>
+  </proxies>
+
+  <profiles>
+    <profile>
+      <id>${env.MAVEN_STRING1}</id>
+      <activation>
+        <activeByDefault>${env.MAVEN_BOOLEAN}</activeByDefault>
+        <jdk>${env.MAVEN_STRING1}</jdk>
+        <os>
+          <name>${env.MAVEN_STRING1}</name>
+          <family>${env.MAVEN_STRING1}</family>
+          <arch>${env.MAVEN_STRING1}</arch>
+          <version>${env.MAVEN_STRING1}</version>
+        </os>
+        <property>
+          <name>${env.MAVEN_STRING1}</name>
+          <value>${env.MAVEN_STRING1}</value>
+        </property>
+        <file>
+          <exists>${env.MAVEN_STRING1}</exists>
+          <missing>${env.MAVEN_STRING1}</missing>
+        </file>
+      </activation>
+      <properties>
+        <user.install>${env.MAVEN_STRING1}</user.install>
+      </properties>
+      <repositories>
+        <repository>
+          <id>${env.MAVEN_STRING1}</id>
+          <name>${env.MAVEN_STRING1}</name>
+          <releases>
+            <enabled>${env.MAVEN_BOOLEAN}</enabled>
+            <updatePolicy>${env.MAVEN_STRING1}</updatePolicy>
+            <checksumPolicy>${env.MAVEN_STRING1}</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>${env.MAVEN_BOOLEAN}</enabled>
+            <updatePolicy>${env.MAVEN_STRING1}</updatePolicy>
+            <checksumPolicy>${env.MAVEN_STRING1}</checksumPolicy>
+          </snapshots>
+          <url>${env.MAVEN_STRING1}</url>
+          <layout>${env.MAVEN_STRING1}</layout>
+        </repository>
+      </repositories>
+      <pluginRepositories>
+        <pluginRepository>
+          <id>${env.MAVEN_STRING1}</id>
+          <name>${env.MAVEN_STRING1}</name>
+          <releases>
+            <enabled>${env.MAVEN_BOOLEAN}</enabled>
+          </releases>
+          <snapshots>
+            <enabled>${env.MAVEN_BOOLEAN}</enabled>
+          </snapshots>
+          <url>${env.MAVEN_STRING1}</url>
+        </pluginRepository>
+      </pluginRepositories>
+    </profile>
+  </profiles>
+
+  <activeProfiles>
+    <activeProfile>${env.MAVEN_STRING1}</activeProfile>
+  </activeProfiles>
+
+</settings>

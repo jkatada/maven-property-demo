@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+
+  <foo>
+    foovalue
+  </foo>
+
+  <proxies>
+    <proxy>
+      <id>my_proxy</id>
+      <active>true</active>
+      <protocol>http</protocol>
+      <host>${env.MAVEN_PROXY_HOST_STRING}</host>
+      <port>${env.MAVEN_PROXY_PORT_INT}</port>
+      <nonProxyHosts>${env.MAVEN_PROXY_NON_PROXY_HOSTS}</nonProxyHosts>
+    </proxy>
+  </proxies>
+
+  <bar>
+    barvalue
+  </bar>
+
+</settings>

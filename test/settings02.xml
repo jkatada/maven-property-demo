@@ -10,7 +10,7 @@
       <protocol>http</protocol>
       <host>${env.MAVEN_PROXY_HOST_STRING}</host>
       <port>${env.MAVEN_PROXY_PORT_INT}</port>
-      <nonProxyHosts>local.net|some.host.com</nonProxyHosts>
+      <nonProxyHosts>${env.MAVEN_PROXY_NON_PROXY_HOSTS}</nonProxyHosts>
     </proxy>
   </proxies>
 

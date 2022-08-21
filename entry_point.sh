@@ -1,16 +1,19 @@
 #!/bin/bash
 
+set -eux
+
 cd ./maven
 unzip apache-maven-${MAVEN_VERSION}-bin.zip
 export PATH=/root/maven/apache-maven-${MAVEN_VERSION}/bin:$PATH
+cd ../
 
-mvn help:effective-settings -X
+#mvn help:effective-settings -X
+mvn clean help:effective-settings
 
-export MAVEN_PROXY_HOST_STRING=proxy.foo.com
-export MAVEN_PROXY_PORT_INT=18080
+cd /root
+rm -rf ./log/*
+/bin/bash ./test/test01.sh > ./log/test01.log
+/bin/bash ./test/test02.sh > ./log/test02.log
+/bin/bash ./test/test03.sh > ./log/test03.log
+/bin/bash ./test/test04.sh > ./log/test04.log
 
-echo "==== env ===="
-env | sort
-echo "============="
-
-mvn -s /root/settings.xml help:effective-settings -X

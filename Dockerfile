@@ -4,8 +4,8 @@ USER root
 WORKDIR /root
 
 COPY ./pom.xml ./pom.xml
-COPY ./settings.xml /root/settings.xml
 COPY ./entry_point.sh ./entry_point.sh
+COPY ./test ./test
 COPY ./maven ./maven
 
 ENTRYPOINT ["./entry_point.sh"]
